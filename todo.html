@@ -1,0 +1,64 @@
+<!Doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>TO-DO List </title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<center>
+<h1 id="heading">To-Do App</h1>
+<div class="div1">
+<select  id="text-box" class="input1" placeholder="Enter Your Text">
+ <option value="Click">Click</option>
+  <option value="Change">Change</option>
+  <option value="Cut">Cut</option>
+  <option value="Dblclick">Dblclick</option>
+<option value="Drag">Drag</option>
+  <option value="Dragend">Dragend</option>
+  <option value="Drop">Drop</option>
+  <option value="Error">Error</option>
+<option value="Focus">Focus</option>
+  <option value="Focusin">Focusin</option>
+  <option value="Focusout">Focusout</option>
+  <option value="Input">Input</option>
+<option value="Invalid">Invalid</option>
+  <option value="Load">Load</option>
+  <option value="Keyup">Keyup</option>
+  <option value="Keypress">keypress</option>
+<option value="Mouseout">Mouseout</option>
+  <option value="Mouseup">Mouseup</option>
+  <option value="Offline">Offline</option>
+  <option value="Online">Online</option>
+</select>
+<input type="button" name="submit" id="btn" value="Submit" class="button2">
+<ul id="ul1" style="list-style-type:none" class="ul2">
+</ul>
+</div>
+</center>
+<script>
+var e=document.getElementById('text-box')
+console.log(e)
+var e1=document.getElementById('btn')
+console.log(e1)
+e1.addEventListener('click',testClick)
+function testClick(){
+var ul=document.getElementById('ul1')
+var item=document.createElement('li')
+var btn=document.createElement('button')
+var attr = document.createAttribute("id");
+attr.value = "id1";
+item.setAttributeNode(attr); 
+var attr1= document.createAttribute("id");
+attr1.value = "bt1";
+btn.setAttributeNode(attr1); 
+btn.appendChild(document.createTextNode("Delete"));
+console.log(item)
+ul.appendChild(item)
+item.textContent=e.value
+item.appendChild(btn)
+
+}
+</script>
+</body>
+</html>
